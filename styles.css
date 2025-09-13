@@ -28,8 +28,20 @@ body {
     overflow: auto;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
-    text-align: center;
+    position: relative;
+}
+
+h1::before {
+    content:'';
+    width: 100%;
+    position: absolute;
+    border: 1px solid black;
 }
 
 .divider {
@@ -57,3 +69,4 @@ button {
     background-color: #A8FBD3;
     border: 2px solid rgba(0, 0, 0, 0.3);
 }
+
