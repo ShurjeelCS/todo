@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    background-color:#6a88b8 ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #dfe3eb;
+    border: 3px solid #61482e;
+    width:40rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.divider {
+    border-bottom: 2px solid black;
+}
