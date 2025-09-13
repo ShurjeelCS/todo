@@ -8,6 +8,7 @@
 
 html, body {
     height: 100%; 
+    color: black;
 }
 
 body {
@@ -18,9 +19,13 @@ body {
 }
 
 .container{
-    background-color: #dfe3eb;
-    border: 3px solid #61482e;
-    width:40rem;
+    background-color: #4FB7B3;
+    width:400px;
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    height: 600px; 
+    position:relative;
+    overflow: auto;
 }
 
 h1 {
@@ -28,5 +33,27 @@ h1 {
 }
 
 .divider {
+    margin-bottom: 0.5em;
     border-bottom: 2px solid black;
+}
+
+.bottom {
+    position: absolute;
+    bottom:0.5em;
+    right:2em;
+}
+
+button {
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #637AB9;
+    border: 0;
+
+}
+
+.testing {
+    border-radius: 20px;
+    padding: 0.5em 1em;
+    background-color: #A8FBD3;
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }
