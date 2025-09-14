@@ -9,19 +9,23 @@ addBtn.addEventListener(`click`, () => {
 
 function addItem(taskItem) {
     
+    //create elements and set correct class to ensure styling
     const rowOutline = document.createElement(`div`);
+    rowOutline.setAttribute(`class`, `itemRow`)
     const tick = document.createElement('i');
     tick.setAttribute(`id`, `tick`);
     tick.setAttribute(`class`, `bx  bx-check`);
-    itemOutline.setAttribute(`style`, `border-radius: 20px;
-    padding: 0.5em 1em;
-    background-color: #A8FBD3;
-    border: 2px solid rgba(0, 0, 0, 0.3);`);
     const item = document.createElement(`p`);
+    const remove = document.createElement(`button`);
+    remove.textContent= `Remove`;
+    remove.setAttribute(`class`, `remove`)
+
     
         item.textContent = taskItem;
-        itemOutline.appendChild(item);
-        list.appendChild(itemOutline);      
+        rowOutline.appendChild(tick);
+        rowOutline.appendChild(item);
+        rowOutline.appendChild(remove);
+        list.appendChild(rowOutline);      
 }
 
 const deleteBtn = document.querySelector(`.remove`);
