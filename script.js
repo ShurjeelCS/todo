@@ -5,6 +5,7 @@ addBtn.addEventListener(`click`, () => {
     let task = document.querySelector(`.input`).value
     taskList.push(task);
     addItem(task);
+    document.querySelector(`.input`).value = '';
 });
 
 function addItem(taskItem) {
