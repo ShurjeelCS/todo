@@ -18,19 +18,23 @@ function addItem(taskItem) {
     const item = document.createElement(`p`);
     const remove = document.createElement(`button`);
     remove.textContent= `Remove`;
+    
+    //handles remove item logic before remove button is added
     remove.setAttribute(`class`, `remove`)
+    remove.addEventListener(`click`, () => {
+            list.removeChild(remove.parentElement);
+     })
 
+     tick.addEventListener(`click`, () => {
+        item.style.textDecoration = `line-through`;
+     });
     
         item.textContent = taskItem;
         rowOutline.appendChild(tick);
         rowOutline.appendChild(item);
         rowOutline.appendChild(remove);
-        list.appendChild(rowOutline);      
-}
+        list.appendChild(rowOutline); 
+        
+    
 
-const deleteBtn = document.querySelector(`.remove`);
-deleteBtn.addEventListener(`click`, () => {
-    taskList.pop();
-    console.log(taskList + taskList.length);
-    list.removeChild(list.lastChild);
-});
+}
