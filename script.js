@@ -3,9 +3,14 @@ const addBtn = document.querySelector(`.add`);
 const list = document.querySelector(`.list`);
 addBtn.addEventListener(`click`, () => {
     let task = document.querySelector(`.input`).value
-    taskList.push(task);
-    addItem(task);
-    document.querySelector(`.input`).value = '';
+    if (task === ``) {
+        alert(`specify task to add`);
+    } else {
+        taskList.push(task);
+        addItem(task);
+        document.querySelector(`.input`).value = '';
+    }
+    
 });
 
 function addItem(taskItem) {
